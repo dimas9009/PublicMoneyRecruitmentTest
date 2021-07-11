@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VacationRental.Model\VacationRental.Model.csproj" />
+    <ProjectReference Include="..\VacationRental.Repositories\VacationRental.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>
