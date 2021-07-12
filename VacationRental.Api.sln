@@ -7,6 +7,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationRental.Api", "Vacat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationRental.Api.Tests", "VacationRental.Api.Tests\VacationRental.Api.Tests.csproj", "{57FE6E13-7144-459F-BCA8-431087D3DAEE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationRental.Business", "VacationRental.Business\VacationRental.Business.csproj", "{6ED29AAE-9DA7-4319-A652-AA4D32CA0490}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationRental.Model", "VacationRental.Model\VacationRental.Model.csproj", "{08DE51EC-A2A8-49F9-B11F-B50AEE9CD459}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacationRental.Repositories", "VacationRental.Repositories\VacationRental.Repositories.csproj", "{0FD95341-FADE-4476-B128-8D343FB656D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B7871B1E-AD69-42DB-972A-1499335298A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VacationRental.Business.Tests", "VacationRental.Business.Tests\VacationRental.Business.Tests.csproj", "{536AE1AE-C0FD-4BA4-88AC-85AFD43E6072}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +31,29 @@ Global
 		{57FE6E13-7144-459F-BCA8-431087D3DAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57FE6E13-7144-459F-BCA8-431087D3DAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57FE6E13-7144-459F-BCA8-431087D3DAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ED29AAE-9DA7-4319-A652-AA4D32CA0490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED29AAE-9DA7-4319-A652-AA4D32CA0490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED29AAE-9DA7-4319-A652-AA4D32CA0490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED29AAE-9DA7-4319-A652-AA4D32CA0490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08DE51EC-A2A8-49F9-B11F-B50AEE9CD459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08DE51EC-A2A8-49F9-B11F-B50AEE9CD459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08DE51EC-A2A8-49F9-B11F-B50AEE9CD459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08DE51EC-A2A8-49F9-B11F-B50AEE9CD459}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD95341-FADE-4476-B128-8D343FB656D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD95341-FADE-4476-B128-8D343FB656D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD95341-FADE-4476-B128-8D343FB656D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD95341-FADE-4476-B128-8D343FB656D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{536AE1AE-C0FD-4BA4-88AC-85AFD43E6072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{536AE1AE-C0FD-4BA4-88AC-85AFD43E6072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{536AE1AE-C0FD-4BA4-88AC-85AFD43E6072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{536AE1AE-C0FD-4BA4-88AC-85AFD43E6072}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{57FE6E13-7144-459F-BCA8-431087D3DAEE} = {B7871B1E-AD69-42DB-972A-1499335298A1}
+		{536AE1AE-C0FD-4BA4-88AC-85AFD43E6072} = {B7871B1E-AD69-42DB-972A-1499335298A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A5319C5-4F21-41BF-B8A7-BC45868FEC89}
