@@ -52,19 +52,19 @@ namespace VacationRental.Repositories
                 booking =>
                     (booking.RentalId == filter.RentalId) &&
                     (booking.Start <= filter.Start.Date &&
-                     GetEndTimeWithExtraCleaning(booking) > filter.Start.Date)
+                     GetEndTimeWithExtraCleaning(booking) > filter.Start.Date
                     || (booking.Start < GetEndTimeWithExtraCleaning(filter.End, PreparationDays) &&
                         GetEndTimeWithExtraCleaning(booking) >= GetEndTimeWithExtraCleaning(filter.End, PreparationDays))
                     || (booking.Start > filter.Start &&
-                        GetEndTimeWithExtraCleaning(booking) < GetEndTimeWithExtraCleaning(filter.End, PreparationDays))
+                        GetEndTimeWithExtraCleaning(booking) < GetEndTimeWithExtraCleaning(filter.End, PreparationDays)))
             ).ToList();
         }
 
         private DateTime GetEndTimeWithExtraCleaning(BookingViewModel booking)
         {
-            if (booking.ExtraDaysCleaning.HasValue)
+            if (booking.PreparationTimeInDays.HasValue)
             {
-                return booking.End.AddDays(booking.ExtraDaysCleaning.Value);
+                return booking.End.AddDays(booking.PreparationTimeInDays.Value);
             }
 
             return booking.End;

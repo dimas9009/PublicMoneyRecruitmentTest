@@ -1,6 +1,6 @@
 ﻿using VacationRental.Model.Models;
 
-namespace VacationRental.Business
+namespace VacationRental.Business.Services
 {
     public interface IBookingService
     {

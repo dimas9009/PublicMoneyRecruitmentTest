@@ -9,7 +9,7 @@ namespace VacationRental.Model.Models
         public DateTime Start { get; set; }
         public int Nights { get; set; }
 
-        public int? ExtraDaysCleaning { get; set; }
+        public int? PreparationTimeInDays { get; set; }
 
         public DateTime End => Start.AddDays(Nights);
     }

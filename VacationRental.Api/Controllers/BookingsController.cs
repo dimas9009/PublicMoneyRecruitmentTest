@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using VacationRental.Business;
+using VacationRental.Business.Services;
 using VacationRental.Model.Models;
 using BookingBindingModel = VacationRental.Api.Models.BookingBindingModel;
 
@@ -33,7 +34,7 @@ namespace VacationRental.Api.Controllers
         {
             if (model == null)
             {
-                throw new ArgumentNullException("Parameter model should be defined");
+                throw new ArgumentNullException(nameof(model));
             }
 
             return _bookingService.AddNewBooking(new BookingViewModel

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using VacationRental.Business.Validators;
 using VacationRental.Model.Models;
 using VacationRental.Repositories;
 
-namespace VacationRental.Business
+namespace VacationRental.Business.Services
 {
     public class BookingService : IBookingService
     {
@@ -32,15 +31,17 @@ namespace VacationRental.Business
         {
             if (model.Nights <= 0)
                 throw new ApplicationException("Nights must be positive");
-            if (!_rentalRepository.CheckRentalExists(model.RentalId))
-                throw new ApplicationException($"Rental with id '{model.RentalId}' not found");
 
+            var rentalViewModel = _rentalRepository.GetRentalById(model.RentalId);
             try
             {
                 foreach (var validator in _bookingValidators)
                 {
                     validator.ValidForBooking(model);
                 }
+
+                // We should save preparation time to future if we will change Preparation Time in rental model
+                model.PreparationTimeInDays = rentalViewModel.PreparationTimeInDays;
 
                 var id = _bookingRepository.AddNewBooking(model);
                 var key = new ResourceIdViewModel { Id = id };

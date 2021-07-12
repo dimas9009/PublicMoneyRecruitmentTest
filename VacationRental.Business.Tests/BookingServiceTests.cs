@@ -1,5 +1,6 @@
 using System;
 using Moq;
+using VacationRental.Business.Services;
 using VacationRental.Business.Validators;
 using VacationRental.Model.Models;
 using VacationRental.Repositories;
