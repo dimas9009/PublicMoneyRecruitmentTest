@@ -19,12 +19,12 @@ namespace VacationRental.Repositories
             return _bookingDb.Values.Where(
                 booking =>
                     (booking.RentalId == filter.RentalId) &&
-                    (booking.Start <= filter.Start.Date &&
+                    ((booking.Start <= filter.Start.Date &&
                      booking.End > filter.Start.Date)
                     || (booking.Start < filter.End &&
                         booking.End >= filter.End)
                     || (booking.Start > filter.Start &&
-                        booking.End < filter.End)
+                        booking.End < filter.End))
             ).ToList();
         }
 
